@@ -1,14 +1,15 @@
 ToIP Technical Architecture Specification
 ==================
 
-**Specification Status**: v1.0 Draft
+**Specification Status**: v1.0 Public Review Draft 02 (PR2) — 31 May 2024
 
 **Latest Draft:**
 
-[https://github.com/trustoverip/specification-template](https://github.com/trustoverip/tswg-tech-architecture-spec)
+FIX THIS ==>  [https://github.com/trustoverip/specification-template](https://github.com/trustoverip/tswg-tech-architecture-spec)
 
 **Editors:**
 
+- [Wenjing Chu](https://github.com/firegod)
 - [Drummond Reed](https://github.com/talltree)
 
 **Contributors:**

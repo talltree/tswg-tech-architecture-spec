@@ -2,17 +2,23 @@
 {
   "specs": [
     {
-      "title": "ToIP Technical Architecture Specification",
+      "title": "ToIP Template Specification",
       "spec_directory": "./spec",
       "output_path": "./docs",
       "markdown_paths": [
-        "spec.md"
+        "title.md", 
+        "header.md",
+        "toc.md",
+        "foreword.md",
+        "introduction.md",
+        "normative_references.md",
+        "terms_and_definitions.md",
+        "spec.md",
+        "annex.md",
+        "biblio.md"
       ],
       "logo": "https://raw.githubusercontent.com/trustoverip/logo-assets/master/logos/ToIP-Logo-Color-SolidDimensional-Horizontal-LightOnDark.svg",
       "logo_link": "https://github.com/trustoverip/specification-template",
-      "external_specs": [
-        {"toip": "https://trustoverip.github.io/ctwg-main-glossary/"}
-      ],
       "source": {
         "host": "github",
         "account": "trustoverip",
