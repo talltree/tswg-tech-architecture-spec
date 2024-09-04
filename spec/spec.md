@@ -48,60 +48,6 @@ For the most recent version of this specification, please see [this ToIP web pag
 
 *Copyright: 2024 Trust Over IP Foundation*
 
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
-
-- [Introduction](#introduction)
-- [Terminology](#terminology)
-- [Motivations](#motivations)
-- [Audience, Purpose and Scope](#audience-purpose-and-scope)
-- [Example Use Cases](#example-use-cases)
-    - [Discovery, Connection, and Authentication](#discovery-connection-and-authentication)
-    - [Digital Wallets and Credentials](#digital-wallets-and-credentials)
-    - [Payments & Value Exchange](#payments--value-exchange)
-    - [Secure Messaging, File Sharing, & Digital Signing](#secure-messaging-file-sharing--digital-signing)
-    - [Cross-Domain Workflows](#cross-domain-workflows)
-  - [Reference Architecture Overview](#reference-architecture-overview)
-    - [Design Goals](#design-goals)
-    - [The Four Layer Pattern](#the-four-layer-pattern)
-    - [High-Level System Architecture](#high-level-system-architecture)
-    - [Verifiable Identifiers](#verifiable-identifiers)
-- [Endpoint systems and the Layered Stack](#endpoint-systems-and-the-layered-stack)
-    - [Endpoint systems](#endpoint-systems)
-    - [Layer 1: Trust Support](#layer-1-trust-support)
-    - [Layer 2: Trust Spanning](#layer-2-trust-spanning)
-    - [Layer 3: Trust Tasks](#layer-3-trust-tasks)
-    - [Layer 4: Trust Applications](#layer-4-trust-applications)
-- [The ToIP Trust Spanning Protocol](#the-toip-trust-spanning-protocol)
-    - [Overview](#overview)
-    - [Identifiers](#identifiers)
-    - [Messages](#messages)
-    - [Routing](#routing)
-    - [Interface to Layer 1](#interface-to-layer-1)
-- [Intermediary Systems](#intermediary-systems)
-- [Supporting Systems](#supporting-systems)
-    - [Overview](#overview-1)
-    - [Example 1 - A DID Method](#example-1---a-did-method)
-    - [Example 2 - A KERI Witness](#example-2---a-keri-witness)
-    - [Generalization](#generalization)
-- [Endpoint System Interoperability](#endpoint-system-interoperability)
-    - [Interoperability between Endpoint Systems Using Decentralized Identifiers](#interoperability-between-endpoint-systems-using-decentralized-identifiers)
-    - [Interoperability between Endpoints Systems Using Other Verifiable Identifiers](#interoperability-between-endpoints-systems-using-other-verifiable-identifiers)
-- [Integration with the ToIP Governance Stack](#integration-with-the-toip-governance-stack)
-- [References](#references)
-- [About the ToIP Foundation](#about-the-toip-foundation)
-- [Appendix A: Consolidated Requirements](#appendix-a-consolidated-requirements)
-- [Appendix B: Consolidated Views of the ToIP Technology Stack](#appendix-b-consolidated-views-of-the-toip-technology-stack)
-    - [Functional Hourglass View](#functional-hourglass-view)
-    - [Sphere-of-Influence View](#sphere-of-influence-view)
-    - [Interaction Pattern View](#interaction-pattern-view)
-- [Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack](#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack)
-- [Footnotes](#footnotes)
-- [^2](#2)
-
-<!-- markdown-toc end -->
-
-
 ## Introduction
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [[xref: toip, ToIP Stack]]. Figure 1 is a conceptual diagram of the basic structure of this "dual stack":
