@@ -1,10 +1,10 @@
 
 
-[//]: # (Pandoc Formatting Macros)
+[//]: ## (Pandoc Formatting Macros)
 
-[//]: # (Main content {#sec:content})
+[//]: ## (Main content {#sec:content})
 
-# Trust over IP (ToIP) Technology Architecture Specification
+## Trust over IP (ToIP) Technology Architecture Specification
 
 **Revision History**
 
@@ -97,7 +97,7 @@ For the most recent version of this specification, please see [this ToIP web pag
 
 <!-- markdown-toc end -->
 
-# 1. Introduction
+## 1. Introduction
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [[xref: toip, ToIP Stack]]. Figure 1 is a conceptual diagram of the basic structure of this "dual stack":
 
@@ -133,7 +133,7 @@ This document is the normative specification for the high-level architecture of 
 
 As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via the [ToIP Foundation website](https://www.trustoverip.org/).
 
-# 2. Terminology
+## 2. Terminology
 
 In this document, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL", when appearing in ALL CAPITALS, are to be interpreted as described in [IETF RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
@@ -141,7 +141,7 @@ All other defined terms are linked to their definitions in the [ToIP Glossary](h
 
 Terms especially important to this specification are also explained further inline.
 
-# 3. Motivations
+## 3. Motivations
 
 *This section is informative.*
 
@@ -163,7 +163,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Public policy.** A well-defined architecture with clear and concise [[xref: toip, terminology]] helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. 
 
-# 4. Audience, Purpose and Scope
+## 4. Audience, Purpose and Scope
 
 *This section is informative.*
 
@@ -197,7 +197,7 @@ By focusing solely on the Technical Architecture Stage, the following are explic
 
 *NOTE: Due to the public policy implications, the ToIP Foundation is committed to producing a companion document called **ToIP Primer for Policymakers**. This document will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the [[xref: toip, ToIP stack]] but do not need (or want) to dive into technical details.*
 
-# 5. Example Use Cases
+## 5. Example Use Cases
 
 *This section is informative.*
 
@@ -211,7 +211,7 @@ They are grouped into five general categories:
 1. Secure Messaging, File Sharing, and Digital Signing
 1. Cross-Domain Workflows
 
-## Discovery, Connection, and Authentication
+### Discovery, Connection, and Authentication
 
 |    Use Case   |    Capsule Description     |
 |---------------|----------------------------|
@@ -221,7 +221,7 @@ They are grouped into five general categories:
 | Authenticating to an Existing Relationship | A [[xref: toip, party]] who has already established a [[xref: toip, ToIP relationship]] with a [[xref: toip, counterparty]] uses that relationship to exchange one or more [[xref: toip, proofs]] of one or more [[xref: toip, authenticators]] (e.g., digital signature, liveness check) in order to establish an [[xref: toip, authentication assurance level]] (AAL) acceptable to the [[xref: toip, counterparty]]. |
 | Exchanging Electronic Business Cards | A [[xref: toip, party]] and [[xref: toip, counterparty]] use a [[xref: toip, ToIP relationship]] to send each other [[xref: toip, cryptographically verifiable]] electronic business cards that can be dynamically updated by the publishing party. *Note: These are not verifiable credentials as the “holder” and “verifier” are the same [[xref: toip, party]].* |
 
-## Digital Wallets and Credentials
+### Digital Wallets and Credentials
 
 |    Use Case   |    Capsule Description     |
 |---------------|----------------------------|
@@ -232,7 +232,7 @@ They are grouped into five general categories:
 | Presenting a [[xref: toip, Digital Credential]] Offline | The same use cases as above, except the [[xref: toip, presentation request]] from the [[xref: toip, verifier]] and the [[xref: toip, proof]] from the [[xref: toip, holder]] are exchanged offline, using a direct device-to-device protocol such as a [[xref: toip, QR code]], NFC, Bluetooth Low Energy, etc. This use case can also require the [[xref: toip, verifier]] to have an offline method of verifying credential [[xref: toip, revocation]]. |
 | Revoking (and Optionally Replacing) a [[xref: toip, Digital Credential]] | The [[xref: toip, issuer]] of a credential revokes the credential by updating a [[xref: toip, revocation registry]] of some kind. The [[xref: toip, holder]] may or may not be notified of the [[xref: toip, revocation]]. If the [[xref: toip, issuer]] and the [[xref: toip, holder]] have a [[xref: toip, ToIP relationship]] (or other communications relationship), the [[xref: toip, issuer]] may offer (or the [[xref: toip, holder]]) may request a replacement credential. If the [[xref: toip, holder]] has previously given consent to the [[xref: toip, issuer]], credential replacement may also be automatic. |
 
-## Payments & Value Exchange
+### Payments & Value Exchange
 
 |    Use Case   |    Capsule Description     |
 |---------------|----------------------------|
@@ -245,7 +245,7 @@ They are grouped into five general categories:
 | Bidding in a Digital Auction | The [[xref: toip, holder]] of a [[xref: toip, digital wallet]] participates as a bidder in a digital auction conducted using a [[xref: toip, trust task protocol]]. The [[xref: toip, holder]] submits each bid to the auctioneer by issuing a credential with a non-repudiable [[xref: toip, digital signature]]. The auctioneer as the [[xref: toip, holder]] of each bid credential can provide a [[xref: toip, proof]] of each bid to all bidders. Once the auction is over, the auctioneer presents a [[xref: toip, proof]] of the winning bid credential to that bidder together with a payment request. The purchaser then submits payment back to the supplier as described in the use cases above. |
 | Placing a Digital Stake | The [[xref: toip, holder]] of a [[xref: toip, digital wallet]] transfers a digital currency or some other store of value (called a stake) to an intermediary (e.g., escrow service, distributed ledger, smart contract) as an incentive for the [[xref: toip, holder]] to comply with a set of rules. If the [[xref: toip, holder]] complies, the stake is preserved and—depending on the rules—the [[xref: toip, holder]] may receive a staking reward. If the [[xref: toip, holder]] does not comply, all or part of the stake is forfeited. Digital staking is a feature that can be included in [[xref: toip, trust task protocols]] as an incentive for good behavior. |
 
-## Secure Messaging, File Sharing, & Digital Signing
+### Secure Messaging, File Sharing, & Digital Signing
 
 |    Use Case   |    Capsule Description     |
 |---------------|----------------------------|
@@ -254,7 +254,7 @@ They are grouped into five general categories:
 | Sharing Confidential Documents and Files | The controller of a digital resource stored in a repository uses one of the use cases above to send a credential to an authorized [[xref: toip, party]] that authorizes that [[xref: toip, party]] to access the resource over a secure, private [[xref: toip, ToIP relationship]]. The authorized [[xref: toip, party]] presents a [[xref: toip, proof]] of the access credential to the repository and is granted access. |
 | Signing and Verifying Digital Resources | A [[xref: toip, party]] sends one or more [[xref: toip, counterparties]] a request to apply a [[xref: toip, digital signature]] to one or more digital resources (e.g., documents, files, photos, videos) using any of the use cases described above. Each [[xref: toip, counterparty]] receives the signature request and uses the [[xref: toip, private key]] associated with their [[xref: toip, VID]] to digitally sign the digital resource. If the digital resource is an attachment, the [[xref: toip, counterparty]] returns the digitally signed resource to the originating [[xref: toip, party]]. If the digital resource is in a repository, the repository notifies the originating [[xref: toip, party]] of the signature event. |
 
-## Cross-Domain Workflows
+### Cross-Domain Workflows
 
 |    Use Case   |    Capsule Description     |
 |---------------|----------------------------|
@@ -263,11 +263,11 @@ They are grouped into five general categories:
 | Selling a Registered Vehicle | A vehicle owner lists the vehicle for sale in a marketplace using a one-time [[xref: toip, VID]] for the listing generated by the owner. This enables potential buyers to open a secure, private [[xref: toip, ToIP relationship]] to the owner’s [[xref: toip, agent]] to make an offer. If the owner desires, the agent can filter incoming offers by requesting credentials or requiring stakes from buyers to prove they are legitimate. <br><br>Once the owner accepts an offer, the owner sends an escrow request to a [[xref: toip, third party]] escrow agent. The escrow agent sends a payment request to the buyer. The buyer sends payment to the escrow agent using one of the use cases described above. Once received, the escrow agent notifies the owner. The owner delivers the vehicle to the buyer and also sends the buyer a request for the buyer's [[xref: toip, digital signature]] on a digital certificate of sale. <br><br>The buyer accepts delivery, uses the buyer’s VID to digitally sign the certificate of sale, and returns it to the seller. The buyer notifies the escrow agent of delivery; the escrow agent releases funds to the owner; and the owner delivers the vehicle keys (physical and/or digital) to the buyer. <br><br>The original owner sends a copy of the signed certificate of sale to the vehicle licensing agency. The licensing agency sends the buyer a registration payment request. The buyer sends payment to the licensing agency, and the licensing agency sends a new vehicle registration credential to the buyer. |
 | Orchestrating a Data Supply Chain (“Product Passports”) | The original supplier of a product generates a VID for the product and binds it to a credential carrying the data required for the product to pass through the supply chain to the end consumer (the “product passport”). When the original supplier ships the product to the second supplier in the chain, the original supplier’s agent also sends the product passport to the [[xref: toip, agent]] for the second supplier in the [[xref: toip, trust chain]]. <br><br>The second supplier in the chain creates a second credential with the additional data required to represent their link in the supply chain. The second supplier binds the second credential to the first credential to create the second link in the trust chain. The second supplier then sends both chained credentials to the next supplier in the chain. <br><br>The process is repeated until the product reaches the end consumer. The end consumer's agent can then verify the product passport by verifing all the credentials and links in the [[xref: toip, trust chain]]. |
 
-# 6. Reference Architecture Overview
+## 6. Reference Architecture Overview
 
 *This section is informative.*
 
-## 6.1 Design Goals
+### 6.1 Design Goals
 
 A reference architecture of a complex system is an abstract framework consisting of a list of functional subsystems together with the interfaces and protocols needed to define the potential interactions and dependencies between these systems and/or external systems. This reference architecture provides a logical articulation of these interfaces and protocols which can then be translated into specific component specifications as described in Figure 5.
 
@@ -296,11 +296,11 @@ With regard to the second design goal, the ToIP reference architecture shares th
 1. The Hourglass Model
 1. Decentralization
 
-## 6.2 The Four Layer Pattern
+### 6.2 The Four Layer Pattern
 
 Together these considerations lead to the general *four-layer pattern* of a protocol stack summarized in Table 1.
 
-| Layer # | Generic Hourglass Model Layer Name | ToIP Layer Name |
+| Layer ## | Generic Hourglass Model Layer Name | ToIP Layer Name |
 |---------|--------------|-----------|
 | 4       | Applications | Trust Applications |
 | 3       | Supported protocols | Trust Tasks |
@@ -319,7 +319,7 @@ Much of the success of the Internet is attributed to this [[xref: toip, Hourglas
 
 For additional overviews of how the ToIP technology stack implements the [[xref: toip, Hourglass Model]], see [Appendix B](#appendix-b-consolidated-views-of-the-toip-technology-stack).
 
-## 6.3 High-Level System Architecture
+### 6.3 High-Level System Architecture
 
 The reference architecture of the ToIP stack provides a generalization of different solutions to trust establishment over the Internet (or over other digital networks). This section introduces the basic concepts, requirements and vocabulary with which to consider: a) each functional component, b) the interface definitions and protocols between these components, and c) interoperability of solutions built upon those components. Subsequent sections will describe these components and protocols in more detail.
 
@@ -352,7 +352,7 @@ Figure 8 shows a high level view of how these three basic types of component sys
 
 The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.
 
-## 6.4 Verifiable Identifiers
+### 6.4 Verifiable Identifiers
 
 Just as IP addresses are the heart of the Internet [[xref: toip, TCP/IP stack]], [[xref: toip, cryptographically verifiable]] identifiers (VIDs) are the heart of the ToIP stack. Figure 9 illustrates a basic taxonomy of these identifiers.
 
@@ -373,10 +373,10 @@ However, as figure 9 illustrates, there are also SCIDs and XVIDs that are not DI
 
 Requirements for VIDs are covered in [Section 8.2](#82-identifiers).
 
-# 7. Endpoint systems and the Layered Stack
+## 7. Endpoint systems and the Layered Stack
 *This section is normative.*
 
-## 7.1 Endpoint systems
+### 7.1 Endpoint systems
 
 [[xref: toip, Endpoint systems]] represent ToIP systems that are under a [[xref: toip, party]]’s direct control. An [[xref: toip, endpoint system]]'s boundary is delineated by its locus of control. A [[xref: toip, party]] means the entity that is evaluating, relying on, and benefiting from a trust relationship. In other words, a [[xref: toip, party]] is any user of the system without regard to their [[xref: toip, role]] in the system. This represents a contrast with the traditional identity and access management (IAM) distinct [[xref: toip, roles]] of a user who is making trust assertions and a [[xref: toip, relying party]] who is relying on those assertions to make a [[xref: toip, trust decision]]. In a ToIP system, [[xref: toip, endpoint systems]] have a symmetric [[xref: toip, peer-to-peer]] [[xref: toip, trust relationship]] in Layer 2 — the [[xref: toip, trust spanning layer]].
 
@@ -403,7 +403,7 @@ The distinction between an interface and a protocol is whether the systems commu
 
 The four layer stack within an [[xref: toip, endpoint system]] is defined in the following sections.
 
-## 7.2 Layer 1: Trust Support
+### 7.2 Layer 1: Trust Support
 
 If a ToIP [[xref: toip, endpoint system]] includes trust support functions *within its locus of control*, then those functions MUST be included at Layer 1 of the [[xref: toip, endpoint system]]. [REQ L1.1] The exact nature of the trust support functions required by any particular [[xref: toip, endpoint system]] may vary significantly depending on the endpoint system’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the trust support functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. 
 
@@ -425,13 +425,13 @@ Diversity of implementations of Layer 1 trust support functions is *intentional*
 
 *NOTE: For functional, performance, security, or other reasons, a Layer 1 trust support function implementation may use a remote service outside its locus of control, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are [[xref: toip, supporting systems]] to the Layer 1 implementation; they are not part of Layer 1 itself. See [Section 10.1](#101-overview)*.
 
-## 7.3 Layer 2: Trust Spanning
+### 7.3 Layer 2: Trust Spanning
 
 Layer 2 is the [[xref: toip, trust spanning layer]] of the ToIP stack. In keeping with Design Principle #3 ([The Hourglass Model](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), this means there is only one requirement for Layer 2: A ToIP [[xref: toip, endpoint system]] MUST communicate with another ToIP [[xref: toip, endpoint system]] using the [[xref: toip, ToIP Trust Spanning Protocol]]. [REQ L2.1] No other functions are required.
 
 The requirements for the [[xref: toip, ToIP Trust Spanning Protocol]] are defined in [Section 8](#8-the-toip-trust-spanning-protocol).
 
-## 7.4 Layer 3: Trust Tasks
+### 7.4 Layer 3: Trust Tasks
 
 Many applications may require more complex trust-building functions than the minimal set offered directly by the [[xref: toip, ToIP Trust Spanning Protocol]]. When one of these functions is reusable across multiple contexts that are separated in time, space, or perspective, we call it a [[xref: toip, trust task]]. Trust tasks can be standardized as their own higher-level protocols at Layer 3 of the ToIP stack. 
 
@@ -452,7 +452,7 @@ There can be as many [[xref: toip, trust task protocol]] as are needed by Layer 
   - Digital auctions
   - Digital notaries
 
-## 7.5 Layer 4: Trust Applications
+### 7.5 Layer 4: Trust Applications
 
 Layer 4 is an open-ended application layer for any application that needs to engage in trusted interactions. Layer 4 [[xref: toip, trust applications]] MAY use any number of Layer 3 [[xref: toip, trust task protocols]. [REQ L4.1]. 
 
@@ -460,11 +460,11 @@ If a Layer 4 [[xref: toip, trust application]] does not use a Layer 3 [[xref: to
 
 Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 ([Trust is Human](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) and #14 ([Trust and Technology have a Reciprocal Relationship](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 [[xref: toip, trust application]] MUST support any ToIP-defined [[xref: toip, trust affordances]] relevant to that application. [REQ 4.3]
 
-# 8. The ToIP Trust Spanning Protocol
+## 8. The ToIP Trust Spanning Protocol
 
 *This section is normative.*
 
-## 8.1 Overview
+### 8.1 Overview
 
 This section describes the [[xref: toip, ToIP Trust Spanning Protocol]] required at Layer 2 to communicate between any two [[xref: toip, endpoint systems]]. The overall protocol operation is shown in Figure 11 below.
 
@@ -496,7 +496,7 @@ A view of the ToIP protocol stack on an [[xref: toip, endpoint system]] is shown
 
 The following sections enumerate the requirements in each of these four areas.
 
-## 8.2 Identifiers
+### 8.2 Identifiers
 
 A key difference between Internet architecture and ToIP architecture is that the former only needed to identify the network endpoints of devices for data communications. The solution was Internet Protocol (IP) addresses: a global addressing scheme for network endpoints independent of any specific local area network.
 
@@ -528,7 +528,7 @@ Such proofs may require support from one or more Layer 1 trust support functions
 
 Different considerations apply when a VID needs to be provably bound to a digital resource, such as a file, photo, or video. This can be accomplished using VIDs that serve as [[xref: toip, content-addressable identifiers]] or [[xref: toip, self-addressing identifiers]] (SAIDs) that are derived from a [[xref: toip, cryptographic hash]] of the subject resource.
 
-## 8.3 Messages
+### 8.3 Messages
 
 Messages are the lingua franca of the [[xref: toip, ToIP Trust Spanning Protocol]]. To achieve the design goals in [Section 6.1](#61-design-goals), the following requirements must be met:
 
@@ -547,7 +547,7 @@ The [[xref: toip, ToIP Trust Spanning Protocol]] MUST enable the composition of 
 
 The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support extensible message schema. [REQ 2.13] This enables different [[xref: toip, trust task protocols]] to be constructed without changing the base format.
 
-## 8.4 Routing
+### 8.4 Routing
 
 Routing of a message from a sender to a receiver proceeds in three steps as shown in Figure 8:
 
@@ -567,7 +567,7 @@ The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support the option to deli
 
 The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, confidentiality]] with regard to the metadata required for message routing. [REC 2.18]
 
-## 8.5 Interface to Layer 1
+### 8.5 Interface to Layer 1
 
 Given these requirements for the [[xref: toip, ToIP Trust Spanning Protocol]] at Layer 2, the trust support function interfaces at Layer 1 should only need to include the following. Note that Layer 3 [[xref: toip, trust tasks]] or Layer 4 [[xref: toip, trust applications]] may also need to call these interfaces directly.
 
@@ -576,7 +576,7 @@ Given these requirements for the [[xref: toip, ToIP Trust Spanning Protocol]] at
   1. **Transport** consists of one primitive via which the sender’s Layer 2 implementation can submit a message for transmission and another primitive through which the receiver’s Layer 1 implementation can deliver a message up to Layer 2.
   1. **User binding** is the interface via which a Layer 2 implementation can request and verify a [[xref: toip, biometric]] or other [[xref: toip, authentication]] information from a user.
 
-# 9. Intermediary Systems
+## 9. Intermediary Systems
 *This section is normative.*
 
 [[xref: toip, Intermediary systems]] are mediators for facilitating the [[xref: toip, ToIP Trust Spanning Protocol]]. Since the Internet itself is routable as long as a VID can be resolved to a unique IP address, [[xref: toip, intermediary systems]] are not absolutely required. However they can be very beneficial in other aspects.
@@ -610,10 +610,10 @@ This pattern casts one requirement for the use of [[xref: toip, intermediary sys
 
 A ToIP [[xref: toip, intermediary system]] SHOULD be able to perform the functions of a ToIP [[xref: toip, endpoint system]] for the purpose of routing enveloped messages using the [[xref: toip, ToIP Trust Spanning Protocol]]. [REC A.3]
 
-# 10. Supporting Systems
+## 10. Supporting Systems
 *This section is normative.*
 
-## 10.1 Overview
+### 10.1 Overview
 
 An [[xref: toip, endpoint system]] may utilize services from any number of [[xref: toip, supporting systems]], either privileged or unprivileged, over the Internet or other networks.
 
@@ -628,7 +628,7 @@ The ToIP protocol stack in an [[xref: toip, endpoint system]] MAY use the servic
 
 The following sections illustrated the layered interaction between [[xref: toip, endpoint systems]] and [[xref: toip, supporting systems]] using examples of known implementations.
 
-## 10.2 Example 1 - A DID Method
+### 10.2 Example 1 - A DID Method
 
 A [[xref: toip, DID method]] may be implemented based on a distributed ledger, e.g. Hyperledger Indy. An [[xref: toip, endpoint system]], in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a privileged [[xref: toip, supporting system]] and the Aries agent implements layer 2 and layer 3 of the [[xref: toip, endpoint system]] stack. Such a design pattern is illustrated in Figure 14.
 
@@ -638,7 +638,7 @@ A [[xref: toip, DID method]] may be implemented based on a distributed ledger, e
 
 A Layer 2 implementation must implement both [[xref: toip, DID resolution]] and the [[xref: toip, ToIP Trust Spanning Protocol]]. To implement [[xref: toip, DID resolution]] in this example, the Aries agent uses a local service (i.e. within its locus of control), i.e. a [[xref: toip, digital wallet]], which relies on, eventually, a KMS function and a secure storage function within the [[xref: toip, endpoint system]]. It also uses a remote service (i.e. outside of its locus of control) — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete [[xref: toip, endpoint system]]-to-[[xref: toip, supporting system]] protocol that in this case runs over the web.
 
-## 10.3 Example 2 - A KERI Witness
+### 10.3 Example 2 - A KERI Witness
 
 [KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the [[xref: toip, endpoint system]] identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the [[xref: toip, endpoint system]]'s locus of control boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 15. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
 
@@ -648,7 +648,7 @@ These supporting services differ from local dependencies (e.g. secure storage) b
 
 **Figure 15: Example of a KERI witness as a supporting system**
 
-## 10.4 Generalization
+### 10.4 Generalization
 
 Figure 16 illustrates a generalization of the pattern in which [[xref: toip, endpoint systems]] and their respective [[xref: toip, supporting systems]] interact. This figure makes it clear that the interoperability between [[xref: toip, endpoint systems]] in each layer is orthogonal to the methods of interaction with respective [[xref: toip, supporting systems]].
 
@@ -658,9 +658,9 @@ Figure 16 illustrates a generalization of the pattern in which [[xref: toip, end
 
 TODO-WENJING-UPDATE "DID" TO "VID" IN FIGURE 16
 
-# 11. Endpoint System Interoperability
+## 11. Endpoint System Interoperability
 
-## 11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers
+### 11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers
 
 [Section 6.4](#64-toip-identifiers) states that “[[xref: toip, Endpoint systems]] [need to] be able to associate, discover and verify the cryptographic keys associated with a VID." This capability is essential in order for two or more [[xref: toip, endpoint systems]] to be able to discover and connect with each other over the [[xref: toip, ToIP Trust Spanning Protocol]].
 
@@ -672,7 +672,7 @@ If an [[xref: toip, endpoint system]] is identified with a publicly resolvable [
 
 If an [[xref: toip, endpoint system]] is identified with a private, pairwise DID — called a **peer DID** — the discovery and exchange of a [[xref: toip, DID document]] needs to use an [[xref: toip, out-of-band interaction]] (OOBI) protocol. Common examples include [[xref: toip, QR codes]] and custom-generated [[xref: toip, deep links]].
 
-## 11.2 Interoperability between Endpoints Systems Using Other Verifiable Identifiers
+### 11.2 Interoperability between Endpoints Systems Using Other Verifiable Identifiers
 
 If an [[xref: toip, endpoint system]] is not identified with a DID, but with some other kind of VID as defined in [section 6.4](#64-toip-identifiers), then a different approach must be used to bootstrap communications using the [[xref: toip, ToIP Trust Spanning Protocol]]. This requires enabling discovery and verification of:
 
@@ -686,7 +686,7 @@ If the VID is an HTTPS URL, there are at least two solutions:
 
 We anticipate that integration of decentralized PKI and X.509 PKI will be a topic of increasing interest and innovation.
 
-# 12. Integration with the ToIP Governance Stack
+## 12. Integration with the ToIP Governance Stack
 
 As explained in the Introduction, this specification, maintained by the ToIP [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group), is focused entirely on requirements for the [[xref: toip, ToIP Technology Stack]]. A separate set of specifications, maintained by the ToIP [Governance Stack Working Group](https://wiki.trustoverip.org/display/HOME/Governance+Stack+Working+Group), defines the requirements for the [[xref: toip, ToIP Governance Stack]]. The first generation of the [[xref: toip, ToIP Governance Architecture Specification]] and related specifications were published in January 2022 and are summarized [here](https://trustoverip.org/news/2022/02/01/the-toip-foundation-releases-its-first-official-governance-specifications/).
 
@@ -707,22 +707,22 @@ The use of persistent, discoverable, [[xref: toip, cryptographically verifiable]
 
 For additional recommendations about integration of the [[xref: toip, ToIP Governance Stack]] with the [[xref: toip, ToIP Technology Stack]], please see the [ToIP Governance Architecture Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Architecture-Specification-V1.0-2022-12-21.pdf) and the [ToIP Governance Metamodel Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Metamodel-Specification-V1.0-2022-12-21.pdf).
 
-# 13. References
+## 13. References
 
 *NOTE: References in this second public review draft (PR2) are currently provided inline as hyperlinks. TODO-ADD separate lists of Normative and Informative References.*
 
-# About the ToIP Foundation
+## About the ToIP Foundation
 
 Founded in May 2020, the ToIP Foundation has grown to over 200 participating organizations plus as many more individual participants. Our mission is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance).
 
 For more information about ToIP Foundation, please read our [Introduction to ToIP](https://trustoverip.org/permalink/Introduction-to-ToIP-V2.0-2021-11-17.pdf) white paper or visit our website at https://trustoverip.org/.
 
 
-# Appendix A: Consolidated Requirements
+## Appendix A: Consolidated Requirements
 
 For ease of reference, the following table consolidates all normative requirements in this specification. Each requirement is linked to the section in which it appears.
 
-| Req # | Description | Section |
+| Req ## | Description | Section |
 |---------|--------------|-----------|
 | | **General ToIP Architecture Requirements**| |
 | A.1       | Implementers SHOULD ensure autonomy for ToIP [[xref: toip, endpoint systems]]. | [7.1](#71-endpoint-systems) |
@@ -759,11 +759,11 @@ For ease of reference, the following table consolidates all normative requiremen
 |L4.2|If a Layer 4 [[xref: toip, trust application]] does not use a Layer 3 [[xref: toip, trust task protocol]], it MUST communicate with other [[xref: toip, endpoint systems]] using the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]].|[7.5](#75-layer-4-trust-applications)|
 |L4.3|A Layer 4 [[xref: toip, trust application]] MUST support any ToIP-defined [[xref: toip, trust affordances]] relevant to that application.|[7.5](#75-layer-4-trust-applications)|
 
-# Appendix B: Consolidated Views of the ToIP Technology Stack
+## Appendix B: Consolidated Views of the ToIP Technology Stack
 
 The ToIP Technology Architecture Task Force has spent many hours discussing how to produce consolidated views of ToIP architecture that are both relatively easy to understand but still technically accurate. In the end, we agreed no single diagram is sufficient. Rather, different views of the architecture should be taken together to see the whole picture. In this appendix we present several of these views — and [we invite feedback](https://trustoverip.org/our-work/technical-architecture/) on others that might be helpful.
 
-## Functional Hourglass View
+### Functional Hourglass View
 
 Figure B1 is a view of the types of functions that belong at each layer within a single [[xref: toip, endpoint system]] as defined in this specification. It illustrates how the [[xref: toip, Hourglass Model]] is implemented as a single [[xref: toip, trust spanning protocol]] at Layer 2, with multiple trust support functions below and multiple supported [[xref: toip, trust task protocols]] above. It also shows one example (at the far right) of a specific category of [[xref: toip, supporting systems]], in this case [[xref: toip, verifiable data registries]] (VDRs) upon which an [[xref: toip, endpoint system]] can rely as external sources of truth.
 
@@ -771,7 +771,7 @@ Figure B1 is a view of the types of functions that belong at each layer within a
 
 **Figure B1: A layer-by-layer view of functions within an endpoint system (also showing verifiable data registries as one type of adjacent supporting system)**
 
-## Sphere-of-Influence View
+### Sphere-of-Influence View
 
 Figure B2 builds on Figure B1 by identifying those technical capabilities that fall within the purview of ToIP’s technical architecture and those that are outside that boundary and thus do not need to be governed by ToIP component specifications.
 
@@ -781,7 +781,7 @@ Figure B2 builds on Figure B1 by identifying those technical capabilities that f
 
 This view shows how the logical capabilities and components identified in the functional Hourglass View can align with dependent solutions that are not governed by the requirements of the ToIP stack. For example, a [[xref: toip, DID resolver]] functioning at Layer 2 in an [[xref: toip, endpoint system]] may call a DID ledger functioning as a [[xref: toip, verifiable data registry]]. While the [[xref: toip, DID resolver]] interface is a ToIP Layer 2 function, the DID ledger called by the associated [[xref: toip, DID method]] is a [[xref: toip, supporting system]] that has its own resolution protocol as defined by the [[xref: toip, DID method]].
 
-## Interaction Pattern View
+### Interaction Pattern View
 
 Figure B3 builds on B1 and B2 by showing the interaction patterns between two different [[xref: toip, endpoint systems]] as well as between an [[xref: toip, endpoint system]] and a set of [[xref: toip, supporting systems]] (on the far right).
 
@@ -789,7 +789,7 @@ Figure B3 builds on B1 and B2 by showing the interaction patterns between two di
 
 **Figure B3: A view showing the interaction patterns both within and between two endpoint systems (as well as with supporting systems on the far right)**
 
-# Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack
+## Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack
 
 Just as the TCP/IP stack did not need to reinvent or replace existing local area networks, but instead added a new inter-networking layer to connect them, the ToIP stack does not reinvent or replace existing centralized or federated identity systems and PKI trust infrastructures. The ToIP stack adds a new inter-_trust_ networking layer to connect the existing trust domains.
 
